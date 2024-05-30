@@ -1,14 +1,7 @@
-function myFunction(){
-    console.log("hello world");
-}
+let firstOperand = '';
+let secondOperand = '';
+let operator = null;
 
-function addOperator(operator, array){
-    
-}
-
-function main(){
-    let calculatorOps = [];  
-     
-}
+function addOperand()
 
 main();
