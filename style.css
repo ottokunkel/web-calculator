@@ -7,7 +7,8 @@
     --light-blue: #8ECAE6;
     --orange: #F77F00;
     --beige: #EAE2B7; 
-    --yellow: #f9844a;
+    --equation-color: #f9844a;
+    --prev-equation-color: #de9c7c; 
     --dark-blue: 	hsl(201, 100%, 14%);
     --light-light-orange: #ffbf69;
     --lighter-blue: #c5ecfe;
@@ -17,7 +18,6 @@
 
 * {
     font-family: 'Chakra Petch';
-    font-size: 28px;
     font-weight: 800;
 }
 body, html {
@@ -33,6 +33,10 @@ body {
     justify-content: center;
     align-items: center;
     background-color: var(--light-organge);
+}
+
+button {
+    font-size: 28px;
 }
 
 .noselect {
@@ -72,14 +76,32 @@ body {
 
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    text-align: right;
-    
 }
 
-/* gives the text inside the display a padding */
+/* adjusts the sizing, coloring, etc. of the display */
 .calculator-display > * {
-    padding: 10px;
+    padding: 5px;
+    padding-right: 20px;
+
+    flex: 1;
+    color: var(--equation-color);
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+
+    justify-content: end;
+}
+.main-equation > *, .previous-equation > * {
+    height: fit-content; 
+}
+.main-equation {
+    font-size: 32px;
+    justify-content:flex-start; 
+}
+.previous-equation {
+    opacity: 50%;
+    font-size: 22px;
+    justify-content: end;
 }
 
 /* sets the button area size */

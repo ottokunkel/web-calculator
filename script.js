@@ -3,10 +3,12 @@
 let firstOperand = '';
 let secondOperand = '';
 let operator = null;
+let previousEquation = '';
 
 
 // grabs the display element
-display = document.querySelector(".calculator-display > *")
+display = document.querySelector(".main-equation > *");
+prevEquation = document.querySelector(".previous-equation > *");
 
 
 /*
@@ -17,6 +19,9 @@ display = document.querySelector(".calculator-display > *")
 
 */
 function clear(){
+  if(firstOperand == '') {
+    previousEquation = '';
+  }; 
   firstOperand = '';
   secondOperand = '';
   operator = null;
@@ -40,6 +45,7 @@ function updateDisplay(result=null){
   }else{
     display.innerText =`${firstOperand} ${secondOperand}`; 
   } 
+  prevEquation.innerText = previousEquation;
 }
 
 /*
@@ -72,9 +78,10 @@ function calculate(){
       res = op1 - op2;
       break;
   }
-  
-  clear();  
-  
+ 
+  previousEquation = `${firstOperand} ${operator} ${secondOperand}`;
+  clear();    
+
   result = res.toString();
   return result;
 }
