@@ -11,6 +11,8 @@
     --dark-blue: 	hsl(201, 100%, 14%);
     --light-light-orange: #ffbf69;
     --lighter-blue: #c5ecfe;
+    --green: #43aa8b;
+    --light-green: #77d7bb;
 }
 
 * {
@@ -18,7 +20,6 @@
     font-size: 28px;
     font-weight: 800;
 }
-
 body, html {
     padding: 0;
     margin: 0;
@@ -31,8 +32,14 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: var(--light-organge);
 }
 
+
+
+
+
+/* sets body size and margin */
 .calculator-body {
     display: flex;
     flex-direction: column;
@@ -45,6 +52,7 @@ body {
     margin: 35px;
 }
 
+/* sets sizing, color, flex for display */
 .calculator-display {
     width: 350px;
     height: 150px;
@@ -59,10 +67,12 @@ body {
     
 }
 
+/* gives the text inside the display a padding */
 .calculator-display > * {
     padding: 10px;
 }
 
+/* sets the button area size */
 .calculator-buttons {
     width: 350px;
     height: 500px;
@@ -75,6 +85,15 @@ body {
     margin-top: 35px;
 }
 
+
+
+
+
+/* 
+
+    * styling for left column of buttons
+
+*/
 .left-buttons {
     height: 100%;
 
@@ -87,6 +106,9 @@ body {
     gap: 10px;
 }
 
+
+/*  conatainer styling */
+/* multiply and divide container */
 .multiply-and-divide {
     display: flex;
     flex-direction: row;
@@ -96,7 +118,7 @@ body {
     gap: 10px;
 
 }
-
+/* numbers containers */
 .numbers {
     flex: 3.5;
     border-radius: 12px;
@@ -106,7 +128,6 @@ body {
     gap: 10px;
     justify-content: space-between;
 }
-
 .numbers > .row {
 
     height: 100%;
@@ -115,14 +136,11 @@ body {
     display: flex;
     gap: 10px;
 }
-
 .row > * {
     height: 100%;
     width: 100%;
 }
-
-
-
+/* zero and point container */
 .zero-and-dot {
     flex: 1;
 
@@ -132,6 +150,9 @@ body {
     gap: 10px;
 }
 
+
+
+/* multiply and divide buttons */
 .multiply, .divide{
     height: 100%; 
     width: 100%;
@@ -139,20 +160,26 @@ body {
 
     border-radius: 12px;
 }
-
+/* zero and point buttons  */
 .zero, .dot {
     height: 100%;
     width: 100%;
 }
-
+/* sets zero twice as big*/
 .zero {
     flex: 2;
 }
-
 .dot {
     flex: 1;
 }
 
+
+
+
+
+/* 
+    right button column styling
+*/
 .right-buttons {
     height: 100%;
     flex: 1;
@@ -163,6 +190,8 @@ body {
     gap: 10px;
 }
 
+/* container styling */
+/* add and subtract container */
 .add-subtract-container {
     flex: 1;
 
@@ -171,49 +200,71 @@ body {
 
     gap: 10px;
 }
-
-.equal {
+/* equal and clear container */
+.equal-and-clear {
     flex: 1;
-    background-color: var(--red);
-    
-    border-radius: 12px;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 10px;
 }
 
+/* right column button sizing */
 .add, .subtract {
     flex: 1;
 }
+.equal, .clear {
+    flex: 1;
+}
 
 
-.orange-button > button {
+
+
+/* 
+    button styling
+        - applies styling to div's children or a button directly
+*/
+button.orange-button, .orange-button > button {
     background-color: var(--orange);
 
     border-radius: 12px;
     color: var(--light-light-orange);
 }
-
-.orange-button > button:active {
+button.orange-button:active, .orange-button > button:active {
     background-color: var(--light-light-orange);
     color: var(--orange);
 }
 
-.blue-button > button {
+
+button.blue-button, .blue-button > button {
     background-color: var(--light-blue);
     color: var(--lighter-blue);
     border-radius: 12px;
 }
-
-.blue-button > button:active {
+button.blue-button:active, .blue-button > button:active {
     background-color: var(--lighter-blue);
     color: var(--light-blue);
 }
 
-.red-button > button {
+
+button.red-button, .red-button > button {
     border-radius: 12px;
     background-color: var(--red);
     color: var(--pink);
 }
-
-.red-button > button:active{
+button.red-button:active, .red-button > button:active{
     background-color: var(--pink);
     color: var(--red);
+}
+
+
+button.green-button, .green-button > button{
+    border-radius: 12px;
+    background-color: var(--green);
+    color: var(--light-green);
+}
+button.green-button:active, .green-button > button:active{
+    background-color: var(--light-green);
+    color: var(--green);
 }
