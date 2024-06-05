@@ -6,7 +6,8 @@
     --light-organge: #FCBF49;
     --light-blue: #8ECAE6;
     --orange: #F77F00;
-    --beige: #EAE2B7; 	
+    --beige: #EAE2B7; 
+    --yellow: #dcbf1c;
     --dark-blue: 	hsl(201, 100%, 14%);
     --light-light-orange: #ffbf69;
     --lighter-blue: #c5ecfe;
@@ -49,6 +50,17 @@ body {
     height: 150px;
     border-radius: 25px;
     background-color: var(--beige);
+    color: var(--yellow);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: right;
+    
+}
+
+.calculator-display > * {
+    padding: 10px;
 }
 
 .calculator-buttons {
