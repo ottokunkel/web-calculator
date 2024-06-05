@@ -1,17 +1,21 @@
-@import url(https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap);
 
 :root{
     --red: #D62828;
+    --pink: #ff6e6e;
     --light-organge: #FCBF49;
     --light-blue: #8ECAE6;
     --orange: #F77F00;
     --beige: #EAE2B7; 	
     --dark-blue: 	hsl(201, 100%, 14%);
-
+    --light-light-orange: #ffbf69;
+    --lighter-blue: #c5ecfe;
 }
 
 * {
-    font-family: 'Roboto';
+    font-family: 'Chakra Petch';
+    font-size: 28px;
+    font-weight: 800;
 }
 
 body, html {
@@ -83,10 +87,29 @@ body {
 
 .numbers {
     flex: 3.5;
-    background-color: var(--orange);
-
     border-radius: 12px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: space-between;
 }
+
+.numbers > .row {
+
+    height: 100%;
+    width: 100%;
+
+    display: flex;
+    gap: 10px;
+}
+
+.row > * {
+    height: 100%;
+    width: 100%;
+}
+
+
 
 .zero-and-dot {
     flex: 1;
@@ -108,10 +131,6 @@ body {
 .zero, .dot {
     height: 100%;
     width: 100%;
-
-    background-color: var(--orange);
-
-    border-radius: 12px;
 }
 
 .zero {
@@ -150,8 +169,39 @@ body {
 
 .add, .subtract {
     flex: 1;
+}
 
-    background-color: var(--light-blue);
+
+.orange-button > button {
+    background-color: var(--orange);
 
     border-radius: 12px;
+    color: var(--light-light-orange);
+}
+
+.orange-button > button:active {
+    background-color: var(--light-light-orange);
+    color: var(--orange);
+}
+
+.blue-button > button {
+    background-color: var(--light-blue);
+    color: var(--lighter-blue);
+    border-radius: 12px;
+}
+
+.blue-button > button:active {
+    background-color: var(--lighter-blue);
+    color: var(--light-blue);
+}
+
+.red-button > button {
+    border-radius: 12px;
+    background-color: var(--red);
+    color: var(--pink);
+}
+
+.red-button > button:active{
+    background-color: var(--pink);
+    color: var(--red);
 }
