@@ -22,6 +22,26 @@ function clear(){
   operator = null;
 }
 
+
+/*
+
+* updates the display with the global variables
+@params result (float): result to display
+@returns: null
+
+*/
+function updateDisplay(result=null){
+  
+  // display the result, or the equation
+  if (result != null){
+    display.innerText = result;
+  }else if(operator) {
+    display.innerText = `${firstOperand} ${operator} ${secondOperand}`; 
+  }else{
+    display.innerText =`${firstOperand} ${secondOperand}`; 
+  } 
+}
+
 /*
 
 * calculates an equation with the global variables
@@ -90,9 +110,13 @@ function buttonClick (e){
     }
   // if it is not a number
   }else{
-
+    if (buttonText == 'clear'){
+      clear();
+      updateDisplay();
+      return;
+    }
     // calculates the result and sets the first operand to the result.
-    if(buttonText == '='){
+    else if(buttonText == '='){
       result = calculate();
       firstOperand = result;
 
@@ -108,15 +132,8 @@ function buttonClick (e){
     }
   }
 
-
-  // display the result, or the equation
-  if (result != null){
-    display.innerText = result;
-  }else if(operator) {
-    display.innerText = `${firstOperand} ${operator} ${secondOperand}`; 
-  }else{
-    display.innerText =`${firstOperand} ${secondOperand}`; 
-  }
+  updateDisplay(result);
+  
 }
 
 
