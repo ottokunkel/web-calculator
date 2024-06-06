@@ -10,7 +10,8 @@ This was mainly a project to get me used to basic HTML, CSS, and JS
 
 ## Screenshots
 
-![Calculator Screenshot](./screenshots/calculator.png)
+<img src="./img/calculator.png" alt="Calculator Screenshot" width="500">
+
 
 ## Getting Started
 
