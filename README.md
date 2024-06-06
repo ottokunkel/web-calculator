@@ -4,6 +4,8 @@ This project is a simple web calculator application built with HTML, CSS, and Ja
 
 This was mainly a project to get me used to basic HTML, CSS, and JS
 
+### Live Site: [Here](https://ottokunkel.github.io/web-calculator/)
+
 ## Features
 
 - **Basic Arithmetic Operations**: Perform addition, subtraction, multiplication, and division.
